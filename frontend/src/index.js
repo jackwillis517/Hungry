@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Login from './Login';
+import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'))
 
 
