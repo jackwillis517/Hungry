@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import styles from './CreateUser.css';
+import './CreateUser.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 const CreateUser = () => {
@@ -45,7 +45,7 @@ const CreateUser = () => {
           />
         </FormGroup>
         <FormGroup className='login-text'>
-          <Label>email</Label>
+          <Label>Email</Label>
           <Input
             value = {email}
             onChange = {(e) => setEmail(e.target.value)} 
