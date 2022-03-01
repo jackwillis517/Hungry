@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import styles from './Login.css';
+import './Login.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 const Login = () => {
