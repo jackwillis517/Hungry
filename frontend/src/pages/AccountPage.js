@@ -8,9 +8,6 @@ const AccountPage = () => {
     return ( 
         <body>
           
-
-
-
             <div class="flex-container">
                 <div className='menu-option'>
                     <ul>
@@ -20,10 +17,8 @@ const AccountPage = () => {
                     </ul>
                 </div>
 
-
                 <div className='edit-profile'>
 
-            
                     <form className='photo' method="post" enctype="multipart/form-data">
                         <input type="file" name="file" id="file"/>
                     </form>
@@ -60,21 +55,9 @@ const AccountPage = () => {
                         </div>
                     </form>
 
-
                 </div>
-                
-
-
-
-
-
             </div>
-
         </body>
-   
-      
     )
-  }
-
-   
+  } 
 export default AccountPage;

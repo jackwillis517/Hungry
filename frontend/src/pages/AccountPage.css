@@ -29,12 +29,10 @@ ul {
   a:visited {
     color: #fffaff;
     background-color: transparent;
-    text-decoration: none;
   }
   
   a:hover {
     background-color: transparent;
-    text-decoration: underline;
   }
 
   .flex-container {
@@ -44,7 +42,7 @@ ul {
   }
   
   .flex-container > div {
-    margin: 10px;
+    margin: 30px;
     padding: 20px;
     font-size: 30px;
   }
@@ -52,7 +50,6 @@ ul {
   .edit-profile{
     flex-basis: 100px;
 	flex-grow: 4;
-    justify-content: flex-end;
 }
 
 .edit-username, .edit-bio, .edit-email, .edit-number {
@@ -75,10 +72,6 @@ ul {
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #fffaff;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
     color: #fffaff;
   }
 
