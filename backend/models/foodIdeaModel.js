@@ -3,13 +3,18 @@ const mongoose = require('mongoose')
 const foodIdeaSchema = mongoose.Schema({
     title: {
         type: String,
-        required: [true, 'Please add a title']
+        required: [true, 'Please add a title'],
+        unique: true,
     },
     description: {
         type: String,
         required: [true, 'Please add a description of the food idea'],
-        unique: true
     },
+    links: {
+        type: String,
+        required: [true, 'Please add links to recipies'],
+        unique: true,
+    }
 }, {
     // Just generates a time stamp when this schema is used (created/updated)
     timestamps: true
