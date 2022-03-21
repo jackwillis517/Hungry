@@ -3,7 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login.js'
 import CreateUser from './pages/CreateUser.js'
 import Navbar from './pages/Navbar.js'
-import AccountPage from './pages/AccountPage.js' 
+import AccountInfo from './pages/AccountPage/AccountInfo.js' 
+import AccountPassword from './pages/AccountPage/AccountPassword.js' 
+
 
 const App = () => {
     return ( 
@@ -12,7 +14,9 @@ const App = () => {
                 <Route path="/login" element={<Login/>} />
                 <Route path="/createuser" element={<CreateUser/>} />
                 <Route path="/navbar" element={<Navbar/>} />
-                <Route path="/AccountPage" element={<AccountPage/>} />
+                <Route path="/AccountPage/AccountInfo" element={<AccountInfo/>} />
+                <Route path="/AccountPage/AccountPassword" element={<AccountPassword/>} />
+
             </Routes>
         </BrowserRouter>
     )
