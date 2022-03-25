@@ -2,7 +2,7 @@ const multer = require("multer");
 
 const fileStorageEngine = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "../Hungry/backend/public/foodideaimages")
+        cb(null, "../Hungry/frontend/src/uploads/foodideaimages")
     },
     filename: (req, file, cb) => {
         fileName = file.originalname

@@ -1,8 +1,27 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 import './FoodSuggester.css'; 
 import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 
 const FoodSuggester = () => {
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [links, setLinks] = useState('')
+    const [imgref, setImgref] = useState('')
+    const therest = title + ".jpg"    
+    useEffect(() => {
+        axios.get('http://localhost:5000/api/foodIdea/623e249af1f8f880fcca395b')
+            .then((res) => {
+                setTitle(res.data[0].title)
+                setDescription(res.data[0].description)
+                setLinks(res.data[0].links)
+                setImgref(res.data[0].imgref)
+            })
+            .catch((res) => {
+                console.log(res.status)
+            })
+    }, [])
+
     return ( 
         <div>
         <div className='navbar'>
@@ -74,11 +93,11 @@ const FoodSuggester = () => {
              </Col>
              <Col xs="auto" >
                 <Card>
-                    <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                    <CardImg top width="100%" src={require("../uploads/foodideaimages/test.jpg")}  alt="Card image cap" />
                     <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
-                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                        <CardTitle>{title}</CardTitle>
+                        <CardText>{description}</CardText>
+                        <CardText>{links}</CardText>
                         <Button style={{marginRight: 50}}>Next</Button>
                         <Button>Add to Cookbook</Button>
                     </CardBody>

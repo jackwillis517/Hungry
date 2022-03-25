@@ -13,7 +13,8 @@ const CreateFoodIdea = () => {
         const foodIdeaData = {
             title: title,
             description: description,
-            links: links
+            links: links,
+            imgref: `../uploads/foodideaimages/${title}.jpg`
         }
         axios.post("http://localhost:5000/api/foodIdea", foodIdeaData)
             .then((response) => {

@@ -6,11 +6,11 @@ const fs = require('fs')
 // @route POST /api/foodIdea
 // @access Private
 const uploadFoodIdea = asyncHandler(async (req, res) => {  
-    // Grab title, description, and links from req body
-    const {title, description, links} = req.body
+    // Grab title, description, links, and image reference from req body
+    const {title, description, links, imgref} = req.body
 
     // If title, description,  or links is empty throw error
-    if (!title || !description || !links){
+    if (!title || !description || !links || !imgref){
         res.status(400)
         throw new Error('Please add all fields')
     }
@@ -26,14 +26,16 @@ const uploadFoodIdea = asyncHandler(async (req, res) => {
     const foodidea = await foodIdea.create({
         title,
         description,
-        links
+        links,
+        imgref,
     })
 
     if (foodidea) {
         res.status(201).json({
             title: foodidea.title,
             description: foodidea.description,
-            links: foodidea.links
+            links: foodidea.links,
+            imgref: foodidea.imgref
         })
 
     } else {
@@ -51,24 +53,37 @@ const uploadFoodIdeaImage = (req, res) => {
 }
 
 // @desc Adds a new food idea image
-// @route GET /api/foodIdea/:id
-// @access Private
-const getFoodIdea = asyncHandler ( async (req, res) => {
-    const foodidea = foodIdea.findById(req.params.id)
-    const path = `../foodideaimages/${foodIdea.title}.jpg`
-    if (fs.existsSync(path)) {
-        console.log('food idea image found')
+// @route GET /api/foodIdea/id
+// @access Public
+const getSpecificFoodIdea = asyncHandler (async (req, res) => {
+    const foodidea = await foodIdea.find({id: req.params.id})
+    if (foodIdea){
+        res.status(200).json(foodidea)
     }
     else {
-        console.log('food idea image does not exist')
+        res.status(400)
+        throw new Error ('Food idea not found')
     }
-    console.log(foodidea)
+})
+
+// @desc Adds a new food idea image
+// @route GET /api/foodIdea/id
+// @access Private
+const getFoodIdea = asyncHandler (async (req, res) => {
+    const foodidea = await foodIdea.findOne()
+    if (foodIdea){
+        res.status(200).json(foodidea)
+    }
+    else {
+        res.status(400)
+        throw new Error ('Food idea not found')
+    }
 })
 
 // @desc Adds a new food idea image
 // @route DELETE /api/foodIdea/:id
 // @access Private
-const removeFoodIdea = asyncHandler ( async (req, res) => {
+const removeFoodIdea = asyncHandler (async (req, res) => {
     const foodidea = foodIdea.findById(req.params.id)
 
     if (!foodidea) {
@@ -84,6 +99,7 @@ const removeFoodIdea = asyncHandler ( async (req, res) => {
 module.exports = { 
     uploadFoodIdea, 
     uploadFoodIdeaImage, 
-    getFoodIdea, 
+    getFoodIdea,
+    getSpecificFoodIdea,
     removeFoodIdea
 }
