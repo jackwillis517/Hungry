@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './AccountPage.css';
+import './AccountInfo.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
-const AccountPage = () => {
+const AccountInfo = () => {
 
     <div></div>
     return ( 
@@ -11,9 +11,8 @@ const AccountPage = () => {
             <div class="flex-container">
                 <div className='menu-option'>
                     <ul>
-                        <li><a href="#edit">Edit Profile</a></li>
-                        <li><a href="#password">Change Password</a></li>
-                        <li><a href="#payments">Payments</a></li>
+                        <li><a href="AccountInfo">Edit Profile</a></li>
+                        <li><a href="AccountPassword">Change Password</a></li>
                     </ul>
                 </div>
 
@@ -60,4 +59,4 @@ const AccountPage = () => {
         </body>
     )
   } 
-export default AccountPage;
+export default AccountInfo;
