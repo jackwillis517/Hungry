@@ -7,8 +7,7 @@ const FoodSuggester = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [links, setLinks] = useState('')
-    const [imgref, setImgref] = useState('')
-    const therest = title + ".jpg"    
+    const [imgref, setImgref] = useState('')    
     useEffect(() => {
         axios.get('http://localhost:5000/api/foodIdea/623e249af1f8f880fcca395b')
             .then((res) => {
@@ -93,7 +92,7 @@ const FoodSuggester = () => {
              </Col>
              <Col xs="auto" >
                 <Card>
-                    <CardImg top width="100%" src={require("../uploads/foodideaimages/test.jpg")}  alt="Card image cap" />
+                    <CardImg top width="100%" src={image}  alt="Card image cap" />
                     <CardBody>
                         <CardTitle>{title}</CardTitle>
                         <CardText>{description}</CardText>
