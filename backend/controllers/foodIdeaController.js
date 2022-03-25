@@ -2,11 +2,10 @@ const asyncHandler = require('express-async-handler')
 const foodIdea = require('../models/foodIdeaModel')
 const fs = require('fs')
 
-// @desc Adds a new food idea
+// @desc Adds a new food ideas' text
 // @route POST /api/foodIdea
 // @access Private
-const uploadFoodIdea = asyncHandler(async (req, res) => {
-    
+const uploadFoodIdea = asyncHandler(async (req, res) => {  
     // Grab title, description, and links from req body
     const {title, description, links} = req.body
 
