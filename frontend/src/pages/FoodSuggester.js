@@ -10,9 +10,9 @@ const FoodSuggester = () => {
             <h1>Hungry</h1>
           </div>
           <div className='navbar-items'>
-            <a href='' className='navbar-item1'>Placeholder</a>
-            <a href='/login' className='navbar-item2'>Login</a>
-            <a href='/createuser' className='navbar-item3'>Create Account</a>
+            <a href='' className='navbar-item1'>Home</a>
+            <a href='' className='navbar-item2'>Cookbook</a>
+            <a href='/menusdash' className='navbar-item3'>Menus</a>
           </div>
           <div className='navbar-account'>Profile Picture</div>
         </div>
