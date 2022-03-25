@@ -7,7 +7,9 @@ import FoodSuggester from './pages/FoodSuggester.js'
 import MenusDashboard from './pages/MenusDashboard.js'
 import CreateFoodIdea from './pages/CreateFoodIdea.js'
 import AccountInfo from './pages/AccountPage/AccountInfo.js' 
-import AccountPassword from './pages/AccountPage/AccountPassword.js' 
+import AccountPassword from './pages/AccountPage/AccountPassword.js'
+import ForgotPass from './pages/ForgotPass.js' 
+import ModifyFoodIdea from './pages/ModifyFoodIdea.js'
 
 const App = () => {
     return ( 
@@ -21,6 +23,8 @@ const App = () => {
                 <Route path="/createfoodidea" element={<CreateFoodIdea/>} />
                 <Route path="/AccountPage/AccountInfo" element={<AccountInfo/>} />
                 <Route path="/AccountPage/AccountPassword" element={<AccountPassword/>} />
+                <Route path="/forgotPassword" element={<ForgotPass/>} />
+                <Route path="/modifyFoodIdea" element={<ModifyFoodIdea/>} />
             </Routes>
         </BrowserRouter>
     )
