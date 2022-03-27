@@ -26,6 +26,18 @@ const CreateFoodIdea = () => {
     }
 
     return (
+        <div>
+        <div className='navbar'>
+            <div className='navbar-brand'>
+                <h1>Hungry</h1>
+            </div>
+            <div className='navbar-items'>
+                <a href='' className='navbar-item1'>Home</a>
+                <a href='/foodSuggester' className='navbar-item2'>Idea Generator</a>
+                <a href='' className='navbar-item3'>Cookbook</a>
+            </div>
+            <div className='navbar-account'>Profile Picture</div>
+        </div>
         <div className='createfoodidea-container'>
             <div className = 'createfoodidea-header'>
                 <h1 className='createfoodidea-title'>
@@ -46,6 +58,7 @@ const CreateFoodIdea = () => {
                     <button className='createfoodidea-button'>Save</button>
                 </form>
             </div>
+        </div>
         </div>
     )
 }

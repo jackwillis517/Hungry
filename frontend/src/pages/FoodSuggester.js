@@ -26,7 +26,7 @@ const FoodSuggester = () => {
                                 <Input type="checkbox" className='checkbox-1'/> 
                             </Col>
                             <Col sm={{ size: 'auto', offset: 0 }}>
-                                <h4 className='checkbox-1'>Title</h4>
+                                <h4 className='checkbox-1'>Beef</h4>
                             </Col>
                         </Row>
                     </Container>
@@ -36,7 +36,7 @@ const FoodSuggester = () => {
                                 <Input type="checkbox" className='checkbox-1'/> 
                             </Col>
                             <Col sm={{ size: 'auto', offset: 0 }}>
-                                <h4 className='checkbox-1'>Title</h4>
+                                <h4 className='checkbox-1'>Peanuts</h4>
                             </Col>
                         </Row>
                     </Container>
@@ -46,7 +46,7 @@ const FoodSuggester = () => {
                                 <Input type="checkbox" className='checkbox-1'/> 
                             </Col>
                             <Col sm={{ size: 'auto', offset: 0 }}>
-                                <h4 className='checkbox-1'>Title</h4>
+                                <h4 className='checkbox-1'>Poultry</h4>
                             </Col>
                         </Row>
                     </Container>
@@ -56,7 +56,7 @@ const FoodSuggester = () => {
                                 <Input type="checkbox" className='checkbox-1'/> 
                             </Col>
                             <Col sm={{ size: 'auto', offset: 0 }}>
-                                <h4 className='checkbox-1'>Title</h4>
+                                <h4 className='checkbox-1'>Pork</h4>
                             </Col>
                         </Row>
                     </Container>
@@ -66,7 +66,7 @@ const FoodSuggester = () => {
                                 <Input type="checkbox" className='checkbox-1'/> 
                             </Col>
                             <Col sm={{ size: 'auto', offset: 0 }}>
-                                <h4 className='checkbox-1'>Title</h4>
+                                <h4 className='checkbox-1'>Shellfish</h4>
                             </Col>
                         </Row>
                     </Container>

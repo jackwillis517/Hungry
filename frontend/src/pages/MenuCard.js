@@ -32,7 +32,7 @@ class MenuCard extends Component {
                         {this.props.menuItem.description}
                     </CardText> */}
                     <Button>
-                        Button
+                        More Info
                     </Button>
                 </CardBody>
             </Card>

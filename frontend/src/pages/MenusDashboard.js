@@ -81,6 +81,7 @@ class MenusDashboard extends Component {
                 <Col xs="2">
                     <div>
                         <Button
+                            href="/newMenu"
                             color="light"
                         >
                             Create
