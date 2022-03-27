@@ -1,13 +1,11 @@
-import React from 'react'
-import './Navbar.css'; 
-//import { Navbar, Nav, NavItem, NavLink, Collapse, NavbarBrand} from 'reactstrap'
-// import Login from './pages/Login.js'
-// import CreateUser from './pages/CreateUser.js'
+// Test Bed for the navbar this is NOT important and is never used <-------------------------
+// IGNORE
+import React from 'react';
 
+//Specific css for this component
+import './Navbar.css'; 
 const Navbar = () => {
     return ( 
-        // <Route path="/login" element={<Login/>} />
-        // <Route path="/createuser" element={<CreateUser/>} />
         <div className='navbar'>
           <div className='navbar-brand'>
             <h1>Hungry</h1>
@@ -21,22 +19,4 @@ const Navbar = () => {
         </div>
     )
 }
-
 export default Navbar;
-
-// {/* <Navbar light expand="md">
-//           <NavbarBrand className='navbar-brand' href="/">Hungry</NavbarBrand>
-//           <Collapse navbar>
-//             <Nav className="ml-auto" navbar>
-//               <NavItem className='navbar-item'>
-//                 <NavLink href="">Placeholder</NavLink>
-//               </NavItem>
-//               <NavItem className='navbar-item'>
-//                 <NavLink href="/login">Login</NavLink>
-//               </NavItem>
-//               <NavItem className='navbar-item'>
-//                 <NavLink href="/createuser">Create Account</NavLink>
-//               </NavItem>
-//             </Nav>
-//           </Collapse>
-//         </Navbar> */}
