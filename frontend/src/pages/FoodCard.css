@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+
+.foodButton-1 {
+    margin-bottom: 15px !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px !important;
+    background-color: #5e5e5e;
+}
+
+.foodButton-2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px !important;
+    background-color: #5e5e5e;
+}
+
+.foodText {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fc5130;
+}
+
+.foodTitle {
+    background-color: #fc5130;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px !important;
+    color: #000;
+}

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'; 
+
+//Import for reactstrap premade components/labels
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+
+//Specific css for this component
 import './ModifyFoodIdea.css'; 
 
 class ModifyFoodIdea extends Component {
+    //Constructor for acccess data from the database, orignally is a static javascript object for testing
     constructor() {
         super();
         this.state = {
@@ -18,6 +23,7 @@ class ModifyFoodIdea extends Component {
     render() {
         return (
             <div>
+                {/* Navbar component */}
                 <div className='navbar'>
                     <div className='navbar-brand'>
                         <h1>Hungry</h1>
@@ -29,32 +35,30 @@ class ModifyFoodIdea extends Component {
                     </div>
                     <div className='navbar-account'>Profile Picture</div>
                 </div>
+                {/* Modify Food Idea form used for a user to update an existing food idea */}
                 <Form className='login-form'>
-                    
                     <h2 className='login-subtitle'>Modify Food Idea</h2>
-
                     <FormGroup className='login-text'>
                     <Label>Name</Label>
-                    <Input
+                    <Input //TODO - connect with backend
                         type='email' 
                         placeholder={this.state.foodItem[0]["name"]} 
                     />
                     </FormGroup>
                     <FormGroup className='login-text'>
                     <Label>Description</Label>
-                    <Input
+                    <Input //TODO - connect with backend
                         type='email' 
                         placeholder={this.state.foodItem[0]["description"]} 
                     />
                     </FormGroup>
                     <FormGroup className='login-text'>
                     <Label>Type</Label>
-                    <Input
+                    <Input //TODO - connect with backend
                         type='email' 
                         placeholder={this.state.foodItem[0]["filterType"]} 
                     />
                     </FormGroup>
-
                     <Button className='login-button'>Update Item</Button>
                 </Form>
             </div>
@@ -62,4 +66,4 @@ class ModifyFoodIdea extends Component {
     }
 }
 
-export default ModifyFoodIdea
+export default ModifyFoodIdea;

@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+
+//Imports axios package for backend
+import axios from 'axios';
+
+//CSS for this specific components
 import './Login.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+
+//Import for reactstrap premade components/labels
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Login = () => {
+    //useState hook used to gather user info
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    //Function that uses axios to make a post request to the server to verify user credentials
     const loginUser = (e) => {
         e.preventDefault()
         const userData = {
@@ -22,6 +30,7 @@ const Login = () => {
 
     <div></div>
     return ( 
+      // Login component used for the user to login into their created account
       <Form className='login-form' onSubmit={loginUser}>
         <h1 className='login-title'>
           <span className='font-weight-bold'>Hungry</span>

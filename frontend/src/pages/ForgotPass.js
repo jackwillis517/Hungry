@@ -1,3 +1,5 @@
+// Never Used. Ever. Not a feature. Not enough time. Remember your password dumbass.
+// Be an old person and write it down on a sticky note
 import React from 'react'
 import axios from 'axios'
 import './ForgotPass.css'; 

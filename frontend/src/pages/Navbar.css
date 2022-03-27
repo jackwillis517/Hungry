@@ -1,11 +1,4 @@
-/* 
-  Colors
-  Blue: 30bced
-  Grey: 303036
-  White: fffaff
-  Orange: fc5130
-  Black: 050401
-*/
+/* CSS for the navbar component, this css is copied into many other components css documents */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
 
@@ -74,19 +67,3 @@ body {
     background-color: lightblue;
     padding-right: 25px;
 }
-
-
-
-
-
-
-
-/* .navbar-brand {
-    font-family: 'Fredoka One', cursive; 
-}
-
-
-
-.navbar-item {
-    font-family: 'Open Sans', sans-serif;
-} */
