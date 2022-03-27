@@ -1,16 +1,16 @@
 const asyncHandler = require('express-async-handler')
 const foodIdea = require('../models/foodIdeaModel')
-const fs = require('fs')
+const {cloudinary} = require('../config/cloudinary')
 
 // @desc Adds a new food ideas' text
 // @route POST /api/foodIdea
 // @access Private
 const uploadFoodIdea = asyncHandler(async (req, res) => {  
     // Grab title, description, links, and image reference from req body
-    const {title, description, links, imgref} = req.body
+    const {title, description, links, cloudinary_url} = req.body
 
-    // If title, description,  or links is empty throw error
-    if (!title || !description || !links || !imgref){
+    // If title, description, or links is empty throw error
+    if (!title || !description || !links || !cloudinary_url){
         res.status(400)
         throw new Error('Please add all fields')
     }
@@ -22,12 +22,12 @@ const uploadFoodIdea = asyncHandler(async (req, res) => {
         throw new Error('Food idea already exists')
     }
 
-    // Create new food idea ()
+    // Create new food idea
     const foodidea = await foodIdea.create({
         title,
         description,
         links,
-        imgref,
+        cloudinary_url
     })
 
     if (foodidea) {
@@ -35,9 +35,8 @@ const uploadFoodIdea = asyncHandler(async (req, res) => {
             title: foodidea.title,
             description: foodidea.description,
             links: foodidea.links,
-            imgref: foodidea.imgref
+            cloudinary_url: foodidea.cloudinary_url
         })
-
     } else {
         res.status(400)
         throw new Error('Invalid food idea data')
@@ -46,17 +45,27 @@ const uploadFoodIdea = asyncHandler(async (req, res) => {
 
 // @desc Adds a new food idea image
 // @route POST /api/foodIdea/image
-// @access Private
-const uploadFoodIdeaImage = (req, res) => {
-    console.log(req.file)
-    console.log("Image uploaded successfully")
-}
+// @access Public
+const uploadFoodIdeaImage = asyncHandler (async (req, res) => {
+   try {
+       const fileStr = req.body.data
+       const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
+           upload_preset: 'hungry_foodideaimages'
+       })
+       console.log(uploadedResponse.secure_url)
+       res.json({cloudinary_url: uploadedResponse.secure_url})
+   } catch (error) {
+       console.error(error)
+       res.status(500).json({err: 'Something went wrong :('})
+   } 
+})
 
-// @desc Adds a new food idea image
+// @desc Gets a specific food idea
 // @route GET /api/foodIdea/id
 // @access Public
 const getSpecificFoodIdea = asyncHandler (async (req, res) => {
-    const foodidea = await foodIdea.find({id: req.params.id})
+    const id = '6240c5ff68ea897453bcf773'
+    const foodidea = await foodIdea.findById(id)
     if (foodIdea){
         res.status(200).json(foodidea)
     }
@@ -66,9 +75,9 @@ const getSpecificFoodIdea = asyncHandler (async (req, res) => {
     }
 })
 
-// @desc Adds a new food idea image
-// @route GET /api/foodIdea/id
-// @access Private
+// @desc Gets a random food idea
+// @route GET /api/foodIdea/
+// @access Public
 const getFoodIdea = asyncHandler (async (req, res) => {
     const foodidea = await foodIdea.findOne()
     if (foodIdea){
@@ -80,7 +89,7 @@ const getFoodIdea = asyncHandler (async (req, res) => {
     }
 })
 
-// @desc Adds a new food idea image
+// @desc Deletes a specific food idea
 // @route DELETE /api/foodIdea/:id
 // @access Private
 const removeFoodIdea = asyncHandler (async (req, res) => {
@@ -98,7 +107,7 @@ const removeFoodIdea = asyncHandler (async (req, res) => {
 
 module.exports = { 
     uploadFoodIdea, 
-    uploadFoodIdeaImage, 
+    uploadFoodIdeaImage,
     getFoodIdea,
     getSpecificFoodIdea,
     removeFoodIdea

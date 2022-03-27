@@ -1,23 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import './FoodSuggester.css'; 
-import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
+import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
 
 const FoodSuggester = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [links, setLinks] = useState('')
-    const [imgref, setImgref] = useState('')    
+    const [cloudinary_url, setCloudinary_URL] = useState('')
+        
     useEffect(() => {
-        axios.get('http://localhost:5000/api/foodIdea/623e249af1f8f880fcca395b')
+        axios.get('http://localhost:5000/api/foodIdea/6240c5ff68ea897453bcf773')
             .then((res) => {
                 setTitle(res.data[0].title)
                 setDescription(res.data[0].description)
                 setLinks(res.data[0].links)
-                setImgref(res.data[0].imgref)
+                setCloudinary_URL(res.data[0].cloudinary_url)
             })
-            .catch((res) => {
-                console.log(res.status)
+            .catch((error) => {
+                console.error(error)
             })
     }, [])
 
@@ -92,7 +93,7 @@ const FoodSuggester = () => {
              </Col>
              <Col xs="auto" >
                 <Card>
-                    <CardImg top width="100%" src={image}  alt="Card image cap" />
+                    <CardImg top width="100%" src={cloudinary_url} alt="Card image cap" />
                     <CardBody>
                         <CardTitle>{title}</CardTitle>
                         <CardText>{description}</CardText>

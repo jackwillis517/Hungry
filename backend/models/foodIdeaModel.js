@@ -15,10 +15,8 @@ const foodIdeaSchema = mongoose.Schema({
         required: [true, 'Please add links to recipies'],
         unique: true,
     },
-    imgref: {
-        type: String,
-        required: true,
-        unique: true,
+    cloudinary_url: {
+        type: String
     }
 }, {
     // Just generates a time stamp when this schema is used (created/updated)
