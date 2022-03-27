@@ -10,6 +10,7 @@ import AccountInfo from './pages/AccountPage/AccountInfo.js'
 import AccountPassword from './pages/AccountPage/AccountPassword.js'
 import ForgotPass from './pages/ForgotPass.js' 
 import ModifyFoodIdea from './pages/ModifyFoodIdea.js'
+import NewMenu from './pages/NewMenu.js'
 
 const App = () => {
     return ( 
@@ -25,6 +26,7 @@ const App = () => {
                 <Route path="/AccountPage/AccountPassword" element={<AccountPassword/>} />
                 <Route path="/forgotPassword" element={<ForgotPass/>} />
                 <Route path="/modifyFoodIdea" element={<ModifyFoodIdea/>} />
+                <Route path="/newMenu" element={<NewMenu/>} />
             </Routes>
         </BrowserRouter>
     )

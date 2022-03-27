@@ -4,8 +4,20 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 const AccountInfo = () => {
 
-    <div></div>
+    
     return ( 
+        <div>
+        <div className='navbar'>
+                    <div className='navbar-brand'>
+                        <h1>Hungry</h1>
+                    </div>
+                    <div className='navbar-items'>
+                        <a href='' className='navbar-item1'>Home</a>
+                        <a href='/foodSuggester' className='navbar-item2'>Idea Generator</a>
+                        <a href='' className='navbar-item3'>Cookbook</a>
+                    </div>
+                    <div className='navbar-account'>Profile Picture</div>
+                </div>
         <body>
           
             <div class="flex-container">
@@ -46,6 +58,7 @@ const AccountInfo = () => {
                 </div>
             </div>
         </body>
+        </div>
     )
   } 
 export default AccountInfo;
