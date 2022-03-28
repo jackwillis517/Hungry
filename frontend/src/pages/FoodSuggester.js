@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
 //CSS for this specific components
 import './FoodSuggester.css'; 
@@ -7,6 +8,29 @@ import './FoodSuggester.css';
 import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 
 const FoodSuggester = () => {
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [links, setLinks] = useState('')
+    const [cloudinary_url, setCloudinary_URL] = useState('')
+
+    const getRandomInt = (max) => {
+        return Math.floor(Math.random() * max)
+    }
+        
+    useEffect(() => {
+        axios.get('http://localhost:5000/api/foodIdea')
+            .then((res) => {
+                const randNum = getRandomInt(res.data.length)
+                setTitle(res.data[randNum].title)
+                setDescription(res.data[randNum].description)
+                setLinks(res.data[randNum].links)
+                setCloudinary_URL(res.data[randNum].cloudinary_url)
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+    }, [])
+
     return ( 
         <div>
             {/* Navbar component */}
@@ -83,11 +107,11 @@ const FoodSuggester = () => {
                 {/* This column is used to display the food item - JACK UPDATE THIS */}
                 <Col xs="auto" >
                     <Card>
-                        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                        <CardImg top width="100%" src={cloudinary_url} alt="Card image cap" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>{title}</CardTitle>
+                            <CardSubtitle>{links}</CardSubtitle>
+                            <CardText>{description}</CardText>
                             <Button style={{marginRight: 50}}>Next</Button>
                             <Button>Add to Cookbook</Button>
                         </CardBody>

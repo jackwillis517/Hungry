@@ -14,6 +14,9 @@ const foodIdeaSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add links to recipies'],
         unique: true,
+    },
+    cloudinary_url: {
+        type: String
     }
 }, {
     // Just generates a time stamp when this schema is used (created/updated)
