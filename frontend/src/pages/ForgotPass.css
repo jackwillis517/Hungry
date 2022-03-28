@@ -1,5 +1,13 @@
-/* CSS for the navbar component, this css is copied into many other components css documents */
-
+/* 
+  Colors
+  Blue: 30bced
+  Grey: 303036
+  White: fffaff
+  Orange: fc5130
+  Black: 050401
+*/
+/* Read js file for this component, this component is dusty and should have never been created, 
+the abomination it is */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
 
 
@@ -67,3 +75,39 @@ body {
     background-color: lightblue;
     padding-right: 25px;
 }
+
+.login-form {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    height: 100%;
+  }
+  
+  .login-button {
+    background-color: #fc5130 !important;
+    width: 100%;
+    height: 45px;
+    margin-top: 15px !important;
+  }
+  
+  .login-button:hover {
+    background-color: #fc6b4e !important;
+  }
+  
+  .login-title {
+    color: #fffaff !important;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+  }
+  
+  .login-subtitle {
+    color: #fffaff !important;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+  
+  .login-text {
+    color: #fffaff !important;
+    font-family: 'Open Sans', sans-serif;
+  }

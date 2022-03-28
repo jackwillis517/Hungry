@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react';
+
+//Imports axios package for backend
+import axios from 'axios';
+
+//CSS for this specific components
 import './CreateUser.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+
+//Import for reactstrap premade components/labels
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const CreateUser = () => {
+    //useState hook used to gather user info
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [verifyPassword, setVerifyPassword] = useState('')
 
+    //Function used to create a user account and verify that the password they entered twice matches
     const createAccount = (e) => {
         e.preventDefault()
         const userData = {
@@ -29,6 +37,7 @@ const CreateUser = () => {
     }
 
     return ( 
+      //Form to create a user, it uses a lot of the same css classes as login does hence the classNames
       <Form className='login-form' onSubmit={createAccount}>
         <h1 className='login-title'>
           <span className='font-weight-bold'>Hungry</span>

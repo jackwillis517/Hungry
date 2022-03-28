@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+
+//Import for reactstrap premade components/labels
 import { Card, CardImg, CardBody, CardTitle, Button } from 'reactstrap';
 
 class MenuCard extends Component {
+    //Constructor to acccess data from the database
     constructor(props) {
         super(props);
     }
     render() {
         return (
+            // Menu Card component used in the Menus Dashboard component for displaying a specific users menu
             <Card body inverse className="border-3 border-white text-center" style={{
                 backgroundColor: '#5e5e5e',
                 // borderColor: 'white'
@@ -32,7 +36,7 @@ class MenuCard extends Component {
                         {this.props.menuItem.description}
                     </CardText> */}
                     <Button>
-                        Button
+                        More Info
                     </Button>
                 </CardBody>
             </Card>
@@ -40,4 +44,4 @@ class MenuCard extends Component {
     }
 }
 
-export default MenuCard
+export default MenuCard;
