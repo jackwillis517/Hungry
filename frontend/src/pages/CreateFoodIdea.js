@@ -106,8 +106,6 @@ const CreateFoodIdea = () => {
                         <textarea value = {description} onChange = {(e) => setDescription(e.target.value)} type='text' />
                         <label>Recipe Links</label>
                         <textarea value = {links} onChange = {(e) => setLinks(e.target.value)} type='text' />
-                        <label>Image</label>
-                        <input className="imageinput"type="file" name="image"/>
                         <button className='createfoodidea-button'>Save</button>
                     </form>
                 </div>
