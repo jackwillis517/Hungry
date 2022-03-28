@@ -41,8 +41,7 @@ const CreateFoodIdea = () => {
         })
         .catch((response) => {
             console.log(response)
-        })
-        
+        })  
     }
 
     const addInfo = () => {

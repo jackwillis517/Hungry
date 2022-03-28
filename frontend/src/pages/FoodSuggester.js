@@ -8,14 +8,19 @@ const FoodSuggester = () => {
     const [description, setDescription] = useState('')
     const [links, setLinks] = useState('')
     const [cloudinary_url, setCloudinary_URL] = useState('')
+
+    const getRandomInt = (max) => {
+        return Math.floor(Math.random() * max)
+    }
         
     useEffect(() => {
-        axios.get('http://localhost:5000/api/foodIdea/6240c5ff68ea897453bcf773')
+        axios.get('http://localhost:5000/api/foodIdea')
             .then((res) => {
-                setTitle(res.data[0].title)
-                setDescription(res.data[0].description)
-                setLinks(res.data[0].links)
-                setCloudinary_URL(res.data[0].cloudinary_url)
+                const randNum = getRandomInt(res.data.length)
+                setTitle(res.data[randNum].title)
+                setDescription(res.data[randNum].description)
+                setLinks(res.data[randNum].links)
+                setCloudinary_URL(res.data[randNum].cloudinary_url)
             })
             .catch((error) => {
                 console.error(error)
@@ -111,29 +116,4 @@ const FoodSuggester = () => {
 }
 
 export default FoodSuggester;
-// import * as React from 'react';
-// import Checkbox from '@mui/material/Checkbox';
-
-// const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-// export default function Checkboxes() {
-//   return (
-//     <div>
-//       <Checkbox {...label} defaultChecked />
-//       <Checkbox {...label} />
-//       <Checkbox {...label} disabled />
-//       <Checkbox {...label} disabled checked />
-//     </div>
-//   );
-// }
-
-//<Container>
-//<Row className='filter-container'>
-  // <Col sm={{ size: 'auto', offset: 0 }}>
-    //  <Input type="checkbox"/> 
-  //</Col>
-  //<Col sm={{ size: 'auto', offset: 0 }}>
-    //  <h4>Title</h4>
-  //</Col>
-//</Row>
-//</Container>   
+   

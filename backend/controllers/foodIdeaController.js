@@ -60,26 +60,11 @@ const uploadFoodIdeaImage = asyncHandler (async (req, res) => {
    } 
 })
 
-// @desc Gets a specific food idea
-// @route GET /api/foodIdea/id
-// @access Public
-const getSpecificFoodIdea = asyncHandler (async (req, res) => {
-    const id = '6240c5ff68ea897453bcf773'
-    const foodidea = await foodIdea.findById(id)
-    if (foodIdea){
-        res.status(200).json(foodidea)
-    }
-    else {
-        res.status(400)
-        throw new Error ('Food idea not found')
-    }
-})
-
 // @desc Gets a random food idea
 // @route GET /api/foodIdea/
 // @access Public
-const getFoodIdea = asyncHandler (async (req, res) => {
-    const foodidea = await foodIdea.findOne()
+const getRandomFoodIdea = asyncHandler (async (req, res) => {
+    const foodidea = await foodIdea.find()
     if (foodIdea){
         res.status(200).json(foodidea)
     }
@@ -108,7 +93,6 @@ const removeFoodIdea = asyncHandler (async (req, res) => {
 module.exports = { 
     uploadFoodIdea, 
     uploadFoodIdeaImage,
-    getFoodIdea,
-    getSpecificFoodIdea,
+    getRandomFoodIdea,
     removeFoodIdea
 }
