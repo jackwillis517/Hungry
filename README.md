@@ -67,3 +67,5 @@ The _Random Food Idea Generator_ is where random food ideas are suggested which 
 Sever.js is the main file for the backend system
 
 ---
+
+##### Created by: Conner Gurnham, Fabian Ponce De Leon, William Seeley, Robert Ward, Jack Willis & Nolan Willis
