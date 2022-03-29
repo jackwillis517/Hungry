@@ -1,3 +1,4 @@
+// Sets up config for cloudinary media storage
 require('dotenv').config()
 const cloudinary = require('cloudinary').v2
 cloudinary.config({ 

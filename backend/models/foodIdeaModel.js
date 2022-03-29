@@ -1,5 +1,9 @@
+// Instructions for how to store food ideas in the mongo database
+
+//Setting variable to require the mongoose package
 const mongoose = require('mongoose')
 
+//Schema for food idea data storage in the database
 const foodIdeaSchema = mongoose.Schema({
     title: {
         type: String,
@@ -23,4 +27,5 @@ const foodIdeaSchema = mongoose.Schema({
     timestamps: true
 })
 
+//Exports the model to the database
 module.exports = mongoose.model('Foodidea', foodIdeaSchema)
