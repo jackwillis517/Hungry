@@ -68,4 +68,4 @@ Sever.js is the main file for the backend system
 
 ---
 
-##### Created by: Conner Gurnham, Fabian Ponce De Leon, William Seeley, Robert Ward, Jack Willis & Nolan Willis
+##### Hungry's Creators: Conner Gurnham, Fabian Ponce De Leon, William Seeley, Robert Ward, Jack Willis & Nolan Willis
