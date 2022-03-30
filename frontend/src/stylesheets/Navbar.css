@@ -1,0 +1,91 @@
+/* CSS for the navbar component, this css is copied into many other components css documents */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: transparent;
+}
+
+.nav-brand {
+    position: relative;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-brand h1 {
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 55px;
+    padding-left: 25px;
+}
+
+.nav-brand:hover {
+    text-decoration: none;
+}
+
+.nav-pages {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 1em;
+    background-color: transparent;
+}
+
+.nav-pages h2 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    background-color: transparent;
+}
+
+.nav-pages:hover {
+    text-decoration: none;
+}
+
+.nav-acc {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    margin-right: 3em;
+    background-color: transparent;
+}
+
+.nav-acc li{
+    margin: 1.3em;
+    background-color: transparent;
+}
+
+.nav-acc h2 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.nav-acc:hover {
+    text-decoration: none;
+}

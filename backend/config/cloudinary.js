@@ -1,4 +1,5 @@
-// Sets up config for cloudinary media storage
+//Congfiguration for cloudinary image storage
+
 require('dotenv').config()
 const cloudinary = require('cloudinary').v2
 cloudinary.config({ 

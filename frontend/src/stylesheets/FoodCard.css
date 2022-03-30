@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+
+.foodText {
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    color: #000;
+}
+
+.foodTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px !important;
+    background-color: transparent;
+    color: #000;
+}

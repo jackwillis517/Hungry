@@ -1,3 +1,5 @@
+//Error middlewar for user authentication
+
 const errorHandler = (err, req, res, next) => {
     // Checks if the status code is already set, if set it to 500
     const statusCode = res.statusCode ? res.statusCode : 500

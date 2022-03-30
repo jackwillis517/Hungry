@@ -1,0 +1,46 @@
+/* 
+  Colors
+  Blue: 30bced
+  Grey: 303036
+  White: fffaff
+  Orange: fc5130
+  Black: 050401
+*/
+
+/* CSS used for the login component */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  background-color: #30bced;
+}
+
+.login-form {
+  position: relative;
+  max-width: 330px;
+  max-height: 330px;
+  padding: 15px;
+  margin-top: 1em;
+}
+
+.login-button {
+  background-color: #fc5130 !important;
+  width: 100%;
+  height: 45px;
+  margin-top: 15px !important;
+}
+
+.login-button:hover {
+  background-color: #fc6b4e !important;
+}
+
+.login-subtitle {
+  color: #fffaff !important;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.login-text {
+  color: #fffaff !important;
+  font-family: 'Open Sans', sans-serif;
+}

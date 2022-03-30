@@ -1,8 +1,10 @@
+// Controller for all requests regarding food ideas
+
 const asyncHandler = require('express-async-handler')
 const foodIdea = require('../models/foodIdeaModel')
 const {cloudinary} = require('../config/cloudinary')
 
-// @desc Adds a new food ideas' text
+// @desc Adds a new food ideas text data
 // @route POST /api/foodIdea
 // @access Private
 const uploadFoodIdea = asyncHandler(async (req, res) => {  
@@ -43,9 +45,9 @@ const uploadFoodIdea = asyncHandler(async (req, res) => {
     }
 })
 
-// @desc Adds a new food idea image
+// @desc Adds a new food ideas image data
 // @route POST /api/foodIdea/image
-// @access Public
+// @access Private
 const uploadFoodIdeaImage = asyncHandler (async (req, res) => {
    try {
        const fileStr = req.body.data
@@ -60,7 +62,7 @@ const uploadFoodIdeaImage = asyncHandler (async (req, res) => {
    } 
 })
 
-// @desc Gets a random food idea
+// @desc Gets a random food idea from the database
 // @route GET /api/foodIdea/
 // @access Public
 const getRandomFoodIdea = asyncHandler (async (req, res) => {
@@ -74,6 +76,7 @@ const getRandomFoodIdea = asyncHandler (async (req, res) => {
     }
 })
 
+// NOT FUNCTIONING
 // @desc Deletes a specific food idea
 // @route DELETE /api/foodIdea/:id
 // @access Private
