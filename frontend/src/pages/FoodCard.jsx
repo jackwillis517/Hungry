@@ -10,18 +10,16 @@ class FoodCard extends Component {
         return (   
             <div>
             <Col xs="3">
-                <Card body inverse style={{backgroundColor : '#fc5130'}}>
-                    <CardBody body inverse style={{backgroundColor : '#fc5130'}}>
+                <Card body inverse style={{backgroundColor : '#fff'}}>
+                    <CardBody body inverse style={{backgroundColor : '#fff'}}>
                         {/* {this.props.foodItem.name} */}
                         <CardTitle className='foodTitle'>Food Item Title</CardTitle>
                     </CardBody>
                     <CardImg width="100%" src="https://picsum.photos/318/180" alt="Card image cap" />
-                    <CardBody body inverse style={{backgroundColor : '#fc5130'}}>
+                    <CardBody body inverse style={{backgroundColor : '#fff'}}>
                         {/* {this.props.foodItem.description} */}
                         <CardText className='foodText'>Description of the super awesome food item that is just here to show scale.</CardText>
-                        <Button className='foodButton-1'>Edit/Remove</Button>
-                        <br/>
-                        <Button className='foodButton-2'>Todo dropdown menu</Button>
+                        <CardText className='foodText'>Description of the super awesome food item that is just here to show scale.</CardText>
                     </CardBody>
                 </Card>
              </Col>
