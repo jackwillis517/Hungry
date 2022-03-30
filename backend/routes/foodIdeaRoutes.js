@@ -1,5 +1,4 @@
-//Routes for all requests regarding food ideas
-//Server.js -> routes -> controller
+//Tells the server which controller to use for food ideas
 
 const express = require('express')
 const router = express.Router()

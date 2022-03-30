@@ -1,7 +1,9 @@
-//Database model for a user
+// Instructions for how to store users in the mongo database
 
+//Setting variable to require the mongoose package
 const mongoose = require('mongoose')
 
+//Schema for user data storage in the database
 const userSchema = mongoose.Schema({
     username: {
         type: String,
@@ -21,4 +23,5 @@ const userSchema = mongoose.Schema({
     timestamps: true
 })
 
+//Exports the model to the database
 module.exports = mongoose.model('User', userSchema)

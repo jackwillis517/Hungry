@@ -1,4 +1,4 @@
-//Routes for all requests regarding users
+//Tells the server which controller to use for user authentication
 
 const express = require('express')
 const router = express.Router()
