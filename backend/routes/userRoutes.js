@@ -1,3 +1,5 @@
+//Routes for all requests regarding users
+
 const express = require('express')
 const router = express.Router()
 const {registerUser, loginUser, getAccount} = 

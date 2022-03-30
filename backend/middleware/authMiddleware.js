@@ -1,16 +1,17 @@
+//Authentication middleware for login
+
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 
 // When a user makes a req it verifies they have a bearer token. 
 // Used to protect routes and authenticate that a user is logged in.
-// https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide
 
 const protect = asyncHandler (async (req, res, next) => {
     let token
 
     // If the token is found
-    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
         try {
             // Get token from header
             token = req.headers.authorization.split(' ')[1]
@@ -27,8 +28,6 @@ const protect = asyncHandler (async (req, res, next) => {
             res.status(401)
             throw new Error('Not authorized')
         }
-    
-    
     }
 
     // If no token is found

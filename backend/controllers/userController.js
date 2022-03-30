@@ -1,3 +1,5 @@
+//Controller for all requests regarding users
+
 // JWT for web tokens
 const jwt = require('jsonwebtoken')
 // Bcyrpt for hashing passwords
@@ -80,14 +82,7 @@ const loginUser = asyncHandler (async(req, res) => {
 // @route GET /api/users/account
 // @access Private
 const getAccount = asyncHandler (async(req, res) => {
-    // Grab userID, name, and email (req.user.id is from the auth MW)
-    const {_id, username, email} = await User.findById(req.user.id)
-
-    res.status(200).json ({
-        id: _id,
-        username,
-        email,
-     })
+    res.status(200).json (req.user)
 })
 
 // Generates JWT

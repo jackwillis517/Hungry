@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jackwillis517/Hungry#readme",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.29.0",
     "cors": "^2.8.5",

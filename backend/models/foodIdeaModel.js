@@ -1,3 +1,5 @@
+//Database model for a food idea
+
 const mongoose = require('mongoose')
 
 const foodIdeaSchema = mongoose.Schema({

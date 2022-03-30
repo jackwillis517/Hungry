@@ -1,3 +1,6 @@
+//Routes for all requests regarding food ideas
+//Server.js -> routes -> controller
+
 const express = require('express')
 const router = express.Router()
 const {uploadFoodIdea, uploadFoodIdeaImage, getRandomFoodIdea, removeFoodIdea} = 
