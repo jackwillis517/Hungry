@@ -2,13 +2,16 @@
 
 const express = require('express')
 const router = express.Router()
-const {registerUser, loginUser, getAccount, addFoodIdea} = 
-require('../controllers/userController')
+const {registerUser, loginUser, getAccount, changePass, changeEmail, 
+    changeName, addFoodIdea, removeFoodIdea} = require('../controllers/userController')
 const {protect} = require('../middleware/authMiddleware')
 
 router.post('/', registerUser)
 router.post('/login', loginUser)
 router.get('/account', protect, getAccount)
-router.put('/account/:foodideaID/:accountID', addFoodIdea)
+router.route('/account/:foodideaID/:accountID').get(addFoodIdea).delete(removeFoodIdea)
+router.put('/account/resetpass', changePass)
+router.put('/account/resetemail', changeEmail)
+router.put('/account/resetname', changeName)
 
 module.exports = router

@@ -37,7 +37,6 @@ const FoodSuggester = () => {
     //Adds the currently displayed food idea to the foodidea array
     //in the user's document in mongoDB
     const addToCookbook = () => {
-       
         const accountID = JSON.parse(localStorage.getItem('user'))
         console.log(accountID._id)
         console.log(foodIdeaID)

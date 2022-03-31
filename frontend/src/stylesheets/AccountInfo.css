@@ -9,75 +9,82 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
 
-* {
-  background-color: #30bced;
-}
-
-ul {
-    list-style-type: none;
-    margin: 20px;
-    padding: 20px;
-    width: 300px;
-    font-size: 30px;
-  } 
-
-  a:link {
-    color: #fffaff;
-    background-color: transparent;
-  }
-
-  a:visited {
-    color: #fffaff;
-    background-color: transparent;
-  }
-  
-  a:hover {
-    background-color: transparent;
-  }
-
   .flex-container {
+    position: relative;
     display: flex;
-    background-color: #30bced;
+    flex-direction: row;
+    top: 5em;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: green;
     color: #fffaff;
   }
-  
-  .flex-container > div {
-    margin: 30px;
-    padding: 20px;
-    font-size: 30px;
+
+  .flex-container h2 {
+    font-size: 32px;
+    font-family: 'Open Sans';
   }
 
-  .edit-profile{
-    flex-basis: 100px;
-	flex-grow: 4;
-}
-
-.edit-username, .edit-bio, .edit-email, .edit-number {
+  .menu {
+    position: relative;
     display: flex;
-}
-
-.text, .header {
-    padding: 20px;
-}
-
-.menu-option{
-    background-color: #fc5130;
-    overflow:hidden;
-    border-radius: 30px;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #fffaff;
-    opacity: 1; /* Firefox */
+    background-color: red;
+    justify-content: left;
+    align-items: top;
+    padding: .2em;
+    height: 150px;
+    width: 200px;
   }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #fffaff;
+
+  .menu ul {
+    text-align: left;
+    list-style: none;
   }
+
+  .profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    width: 600px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: red;
+  }
+
+  .username{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 90%;
+    height: fit-content;
+  }
+
+  .email{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 90%;
+    height: fit-content;
+  }
+
 
   .button{
-      color: #fffaff;
-      background-color: #fc5130;
+    position: absolute;
+    right: 30px;
+    color: #fffaff;
+    background-color: #fc5130;
+    border-radius: 5px;
+    border: none;
   }
 
   .button:hover{
