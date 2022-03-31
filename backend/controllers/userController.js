@@ -82,8 +82,25 @@ const loginUser = asyncHandler (async(req, res) => {
 // @route GET /api/users/account
 // @access Private
 const getAccount = asyncHandler (async(req, res) => {
-    res.status(200).json (req.user)
+    res.status(200).json(req.user)
 })
+
+// @desc Add a food idea to the users account
+// @route PUT /api/users/:foodideaID/:accountID
+// @access Public
+const addFoodIdea = asyncHandler (async(req, res) => {
+    const user = await User.updateOne(
+        {_id: req.params.accountID},
+        {$push: {foodideas: [req.params.foodideaID]}}
+    )
+    if (user){
+        res.status(200).json({id: req.params.accountID, foodidea: req.params.foodideaID})
+    } else {
+        res.status(400)
+        throw new Error ('Failed to update')
+    }
+})
+
 
 // Generates JWT
 // Signs a new token, with the given id and the secret. This token is set
@@ -98,4 +115,5 @@ module.exports = {
     registerUser,
     loginUser,
     getAccount,
+    addFoodIdea
 }

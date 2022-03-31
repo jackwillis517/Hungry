@@ -59,6 +59,7 @@ const Login = () => {
 
     return ( 
       //Form to create a user, it uses a lot of the same css classes as login does hence the classNames
+     
       <Form className='login-form' onSubmit={onSubmit}>
         <h2 className='login-subtitle'>Login</h2>
         <FormGroup className='login-text'>
@@ -83,7 +84,6 @@ const Login = () => {
             placeholder='Password' 
           />
         </FormGroup>
-
         <Button className='login-button'>Login</Button>
       </Form>
     )

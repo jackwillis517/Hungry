@@ -17,7 +17,10 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         required: [true, 'Please add a password']
-    }
+    },
+    foodideas: [{
+        type: String,
+    }]
 }, {
     // Just generates a time stamp when this schema is used (created/updated)
     timestamps: true
