@@ -26,23 +26,23 @@ const Navbar = () => {
     return ( 
         <navbar>
           <div className='nav-brand'>
-            <Link to = '/' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
+            <Link to = '/' style={{textDecoration: 'none'}}>
               <h1>Hungry</h1>
             </Link>
           </div>
           <ul className='nav-pages'>
             <li className='nav-pages-item'>
-              <Link to ='/foodsuggester' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
+              <Link to ='/foodsuggester' style={{textDecoration: 'none'}}>
                 <h2>Idea Generator</h2>
               </Link>
             </li>
             <li className='nav-pages-item'>
-              <Link to = '/cookbook' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
+              <Link to = '/cookbook' style={{textDecoration: 'none'}}>
                 <h2>Cookbook</h2>
               </Link>
             </li>
             <li className='nav-pages-item'>
-              <Link to = '/menusdash' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
+              <Link to = '/menusdash' style={{textDecoration: 'none'}}>
                 <h2>Menus</h2>
               </Link>
             </li>
@@ -52,13 +52,19 @@ const Navbar = () => {
             <>
               <li>
                 <button className='nav-acc-btn' onClick={onLogout}>
-                  <FontAwesomeIcon icon = {faArrowRightFromBracket} style = {{textDecoration: 'none', backgroundColor: 'none'}}></FontAwesomeIcon>
+                  <FontAwesomeIcon 
+                    icon = {faArrowRightFromBracket}
+                    style = {{ textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>
+                  </FontAwesomeIcon>
                   <h2>Logout</h2>
                 </button>
               </li>
               <li className='nav-acc-item'>
-                <Link to = '/account' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
-                <FontAwesomeIcon icon = {faUser} style = {{textDecoration: 'none', backgroundColor: 'none'}}></FontAwesomeIcon>
+                <Link to = '/accountPage/AccountInfo' style={{textDecoration: 'none'}}>
+                  <FontAwesomeIcon 
+                    icon = {faUser} 
+                    style = {{ textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>
+                  </FontAwesomeIcon>
                   <h2>Account</h2>
                 </Link>
               </li>
@@ -66,14 +72,20 @@ const Navbar = () => {
             ) : (
             <>
               <li className='nav-acc-item'>
-                <Link to ='/login' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
-                <FontAwesomeIcon icon = {faArrowRightToBracket} style = {{textDecoration: 'none', backgroundColor: 'none'}}></FontAwesomeIcon>
+                <Link to ='/login' style={{textDecoration: 'none'}}>
+                  <FontAwesomeIcon 
+                    icon = {faArrowRightToBracket} 
+                    style = {{ textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>
+                  </FontAwesomeIcon>
                   <h2>Login</h2>
                 </Link>
               </li>
               <li className='nav-acc-item'>
-                <Link to = '/createuser' style={{textDecoration: 'none', backgroundColor: 'transparent'}}>
-                <FontAwesomeIcon icon = {faUserPlus} style={{textDecoration: 'none', backgroundColor: 'transparent'}}></FontAwesomeIcon>
+                <Link to = '/createuser' style={{textDecoration: 'none'}}>
+                  <FontAwesomeIcon 
+                    icon = {faUserPlus} 
+                    style={{textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>
+                  </FontAwesomeIcon>
                   <h2>Create Account</h2>
                 </Link>
               </li>
