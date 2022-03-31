@@ -8,6 +8,7 @@ import '../stylesheets/FoodSuggester.css';
 import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 
 const FoodSuggester = () => {
+    const [foodIdeaID, setFoodIdeaID] = useState('')
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [links, setLinks] = useState('')
@@ -16,11 +17,13 @@ const FoodSuggester = () => {
     const getRandomInt = (max) => {
         return Math.floor(Math.random() * max)
     }
-        
+    
+    //Loads the random food idea when the pages is loaded
     useEffect(() => {
         axios.get('http://localhost:5000/api/foodIdea')
             .then((res) => {
                 const randNum = getRandomInt(res.data.length)
+                setFoodIdeaID(res.data[randNum]._id)
                 setTitle(res.data[randNum].title)
                 setDescription(res.data[randNum].description)
                 setLinks(res.data[randNum].links)
@@ -30,6 +33,23 @@ const FoodSuggester = () => {
                 console.error(error)
             })
     }, [])
+
+    //Adds the currently displayed food idea to the foodidea array
+    //in the user's document in mongoDB
+    const addToCookbook = () => {
+       
+        const accountID = JSON.parse(localStorage.getItem('user'))
+        console.log(accountID._id)
+        console.log(foodIdeaID)
+        axios.put(`http://localhost:5000/api/users/account/${foodIdeaID}/${accountID._id}`)
+        .then((res) => {
+            console.log(`The food idea: ${foodIdeaID}, was added to the user: 
+            ${accountID._id} account`)
+        })
+        .catch((error) => {
+            console.error(error)
+        })
+    }
 
     return ( 
         <div className='container'>
@@ -99,7 +119,7 @@ const FoodSuggester = () => {
                             <CardSubtitle>{links}</CardSubtitle>
                             <CardText>{description}</CardText>
                             <Button style={{marginRight: 50}}>Next</Button>
-                            <Button>Add to Cookbook</Button>
+                            <Button onClick= {addToCookbook}>Add to Cookbook</Button>
                         </CardBody>
                     </Card>
                 </Col>

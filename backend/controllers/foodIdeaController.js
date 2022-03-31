@@ -76,6 +76,19 @@ const getRandomFoodIdea = asyncHandler (async (req, res) => {
     }
 })
 
+// @desc Gets a specific food idea from the database
+// @route GET /api/foodIdea/id
+// @access Public
+const getSpecificFoodIdea = asyncHandler (async (req, res) => {
+    const foodidea = await foodIdea.findById(req.params.id)
+    if (foodIdea){
+        res.status(200).json(foodidea)
+    }
+    else {
+        res.status(400)
+        throw new Error ('Food idea not found')
+    }
+})
 // NOT FUNCTIONING
 // @desc Deletes a specific food idea
 // @route DELETE /api/foodIdea/:id
@@ -97,5 +110,6 @@ module.exports = {
     uploadFoodIdea, 
     uploadFoodIdeaImage,
     getRandomFoodIdea,
+    getSpecificFoodIdea,
     removeFoodIdea
 }
