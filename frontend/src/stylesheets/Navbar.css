@@ -13,6 +13,8 @@ navbar {
     margin-top: 1.5em;
 }
 
+
+
 navbar ul {
     list-style: none;
 }
@@ -95,3 +97,17 @@ navbar ul {
 .nav-acc:hover {
     text-decoration: none;
 }
+
+@media (max-width: 1186px) {
+    .nav-brand h1 {
+        font-size: 45px;
+    }
+
+    .nav-pages h2 {
+        font-size: 22px;
+    }
+
+    .nav-brand {
+        margin-top: 15px;
+    }
+} 

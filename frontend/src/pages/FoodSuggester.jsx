@@ -79,8 +79,8 @@ const FoodSuggester = () => {
                         <h1>{title}</h1>
                         <h2>{links}</h2>
                         <h2>{description}</h2>
-                        <Button style={{marginRight: 50}}>Next</Button>
-                        <Button onClick= {addToCookbook}>Add to Cookbook</Button>
+                        <Button className = 'foodsuggester-button1'>Next</Button>
+                        <Button className = 'foodsuggester-button2' onClick= {addToCookbook}>Add to Cookbook</Button>
                     </div>
                 </div>
         </div>
