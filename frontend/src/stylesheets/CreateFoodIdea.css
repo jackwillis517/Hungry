@@ -6,13 +6,6 @@
   Orange: fc5130
   Black: 050401
 */
-
-/* CSS used for the Create Food Idea component */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
-
-*{
-  background-color: #30bced;
-}
 .createfoodidea-container{
   position: relative;
   display: flex;

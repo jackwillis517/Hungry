@@ -12,7 +12,7 @@
     npm install -D nodemon
 
 #### Please install the following dependencies in ```Hungry\frontend``` before running the app with the following commands:
-    npm install bootstrap reactstrap react-router-dom axios
+    npm install bootstrap reactstrap react-router-dom axios @reduxjs/toolkit react-redux react-toastify
 
 ### **Starting the Frontend & Sever**
 #### While in the ```Hungry\backend``` folder run the following:
