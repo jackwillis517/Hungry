@@ -1,7 +1,3 @@
-/* CSS for the navbar component, this css is copied into many other components css documents */
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
-
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +11,6 @@ navbar {
     width: 100%;
     height: 80px;
     margin-top: 1.5em;
-
 }
 
 navbar ul {
@@ -73,6 +68,7 @@ navbar ul {
     width: auto;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     margin-top: 1em;
     margin-right: 3em;
     background-color: transparent;

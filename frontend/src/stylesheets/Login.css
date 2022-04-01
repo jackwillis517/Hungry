@@ -6,17 +6,9 @@
   Orange: fc5130
   Black: 050401
 */
-
-/* CSS used for the login component */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
-
-* {
-  background-color: #30bced;
-}
-
 .login-form {
   position: relative;
-  top: 10em;
+  margin-top: 100px !important;
   max-width: 330px;
   max-height: 330px;
   padding: 15px;
