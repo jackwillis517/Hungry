@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+
+  .changepass-flex-container {
+    position: relative;
+    display: grid;
+    grid-template-areas: "changepass-nav changepass-content";
+    grid-template-columns: .25fr .54fr;
+    grid-column-gap: 2em;
+    grid-template-rows: 1fr;
+    top: 2em;
+    width: 100%;
+    height: 500px;
+    color: #fffaff;
+  }
+
+  .changepass-nav-container {
+    display: flex;
+    grid-area: changepass-nav;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 350px;
+  }
+
+  .changepass-content-container {
+    position: relative;
+    top: 5em;
+    display: flex;
+    flex-direction: column;
+    grid-area: changepass-content;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 450px;
+  }
+
+  .changepass-content-container h1 {
+    font-family: 'Open Sans';
+    margin-bottom: 1em;
+  }
+
+  .changepass-content-container h2 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+    margin-bottom: 1.2em;
+  }
+
+  .changepass-content-container h3 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    margin-top: .4em;
+  }
+
+  .changepass-content-container input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    height: 32px;
+    width: 70%;
+    margin-bottom: 1em;
+  }
+
+  .changepass-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 150px;
+    width: 400px;
+    left: 105px;
+  }
+
+  .changepass-menu ul {
+    list-style: none;
+  }
+
+  .changepass-menu a {
+    font-family: 'Open Sans';
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .changepass-menu a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .changepass{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
+  }
+
+  .changepass-button:hover{
+    background-color: #303036;
+    color: white;
+  }
+
+  .changepass-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    
+  }
+  
+  .changepass-button {
+    position: relative;
+    color: white;
+    background-color: #fc5130;
+    width: 70%;
+    height: 45px;
+    margin-top: .5em;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .changepass-button:hover {
+    background-color: #fc6b4e;
+  }
+  
+  .changepass-subtitle {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  Label {
+    font-size: 18px;
+  }

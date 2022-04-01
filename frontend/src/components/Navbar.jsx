@@ -60,7 +60,7 @@ const Navbar = () => {
                 </button>
               </li>
               <li className='nav-acc-item'>
-                <Link to = '/accountPage/AccountInfo' style={{textDecoration: 'none'}}>
+                <Link to = '/account/info' style={{textDecoration: 'none'}}>
                   <FontAwesomeIcon 
                     icon = {faUser} 
                     style = {{ textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>

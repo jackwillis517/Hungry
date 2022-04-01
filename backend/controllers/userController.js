@@ -83,7 +83,6 @@ const getAccount = asyncHandler (async(req, res) => {
 // @access Public
 const changePass = asyncHandler (async(req, res) => {
     const {email, newpassword, newpassword2} = req.body
-    console.log(email, newpassword, newpassword2)
     //Check if required data is sent in the body of the request
     if (!email || !newpassword || !newpassword2){
         res.status(400)

@@ -2,17 +2,27 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
     height: 100vh;
     min-width: 100vw;
 }
 
 .nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 10%;
     width: 100%;
 }
 
 .content {
-    min-height: 90%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
     width: 100%;
     margin-top: 5em;
 }
