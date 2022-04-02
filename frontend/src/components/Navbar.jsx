@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return ( 
-        <navbar>
+        <div className='navbar'>
           <div className='nav-brand'>
             <Link to = '/' style={{textDecoration: 'none'}}>
               <h1>Hungry</h1>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </li>
             </>)}
           </ul>
-        </navbar>
+        </div>
     )
 }
 export default Navbar;

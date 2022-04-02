@@ -58,7 +58,7 @@ const AccountInfo = () => {
     }
 
     return ( 
-        <div class="flex-container">
+        <div className="flex-container">
             <div className='nav-container'>
                 <div className='menu'>
                     <a href="info">Personal info</a>

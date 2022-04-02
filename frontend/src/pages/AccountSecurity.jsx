@@ -10,7 +10,7 @@ const AccountSecurity = () => {
 
     const user = JSON.parse(window.localStorage.getItem('user'))
 
-    const onSubmit = () => {
+    const submitNewPass = () => {
         if (newpassword !== newpassword2){
           toast.error('Passwords do not match')
         } else {
@@ -22,7 +22,8 @@ const AccountSecurity = () => {
             }
             axios.put('http://localhost:5000/api/users/account/resetpass', userData)
                 .then((response) => {
-                    console.log(response)
+                    console.log(JSON.stringify(response))
+                    console.log('success')
                 })
                 .catch((response) => {
                     console.log(response)
@@ -31,7 +32,7 @@ const AccountSecurity = () => {
     }
 
     return ( 
-        <div class="changepass-flex-container">
+        <div className="changepass-flex-container">
             <div className='changepass-nav-container'>
                 <div className='changepass-menu'>
                     <a href="info">Personal info</a>
@@ -41,14 +42,14 @@ const AccountSecurity = () => {
             <div className='changepass-content-container'>
                 <h1>Security</h1>
                 <div className='changepass'>
-                    <form className='changepass-form' onSubmit={onSubmit}>
+                    <form className='changepass-form' onSubmit= {submitNewPass}>
                         <h2 className='changepass-subtitle'>Change Password</h2>
                         <h3>New Password</h3>
                         <input
                             value = {newpassword}
                             id = 'newpassword'
                             name = 'newpassword'
-                            onChange = {(e) => {setNewPassword(e.target.value)}} 
+                            onChange = {(e) => setNewPassword(e.target.value)} 
                             type='password' 
                             placeholder='' 
                         />
@@ -57,7 +58,7 @@ const AccountSecurity = () => {
                             value = {newpassword2}
                             id = 'newpassword2'
                             name = 'newpassword2'
-                            onChange = {(e) => {setNewPassword2(e.target.value)}} 
+                            onChange = {(e) => setNewPassword2(e.target.value)} 
                             type='password' 
                             placeholder='' 
                         />
