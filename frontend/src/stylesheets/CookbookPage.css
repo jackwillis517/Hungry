@@ -1,0 +1,42 @@
+/*i copied this part from a youtube tutorial*/
+#grid {
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    grid-gap: 10px;
+    height: 600px;
+  }
+  /* (B) 1 COL ON SMALL SCREENS */
+  @media screen and (max-width:768px) {
+    #grid { grid-template-columns: auto; }
+  }
+  /*i copied this part from a youtube tutorial*/
+  
+  /* this is where stuff I have written starts */
+  .card {
+    padding: 10px;
+    height: 1200px;
+    border: 1px solid #000000;
+    background: #303036;
+  }
+  .foodImage {
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  .foodName{
+    padding: 10px;
+    font-size: 50;
+    color: #FFFAFF;
+    text-align: center;
+  }
+  .foodDesc{
+    padding: 10px;
+    font-size: 30;
+    color: #FFFAFF;
+  }
+  .btnForm{
+    height: 100px;
+    width: 300px;
+  }
