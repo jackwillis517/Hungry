@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return ( 
-        <navbar>
+        <div className='navbar'>
           <div className='nav-brand'>
             <Link to = '/' style={{textDecoration: 'none'}}>
               <h1>Hungry</h1>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </button>
               </li>
               <li className='nav-acc-item'>
-                <Link to = '/accountPage/AccountInfo' style={{textDecoration: 'none'}}>
+                <Link to = '/account/info' style={{textDecoration: 'none'}}>
                   <FontAwesomeIcon 
                     icon = {faUser} 
                     style = {{ textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </li>
             </>)}
           </ul>
-        </navbar>
+        </div>
     )
 }
 export default Navbar;

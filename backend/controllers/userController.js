@@ -83,7 +83,6 @@ const getAccount = asyncHandler (async(req, res) => {
 // @access Public
 const changePass = asyncHandler (async(req, res) => {
     const {email, newpassword, newpassword2} = req.body
-    console.log(email, newpassword, newpassword2)
     //Check if required data is sent in the body of the request
     if (!email || !newpassword || !newpassword2){
         res.status(400)
@@ -102,6 +101,7 @@ const changePass = asyncHandler (async(req, res) => {
         )
         //Respond with user email if password was changed
         res.status(200).json({email: email})
+        console.log({email: email})
     } else {
         res.status(400)
         throw new Error('Something went wrong')

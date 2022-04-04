@@ -11,23 +11,23 @@ class NewMenu extends Component {
         return (
             <div>
                 {/* New Menu form used to create a new menu (food playlist) */}
-                <Form className='login-form'>
-                    <h2 className='login-subtitle'>Create New Menu</h2>
-                    <FormGroup className='login-text'>
+                <Form className='menu-form'>
+                    <h2 className='menu-subtitle'>Create New Menu</h2>
+                    <FormGroup className='menu-text'>
                     <Label>Menu Title</Label>
                     <Input //TODO - backend hookup
-                        type='email' 
+                        type='text' 
                         placeholder='Super Cool Menu Title'
                     />
                     </FormGroup>
-                    <FormGroup className='login-text'>
+                    <FormGroup className='menu-text'>
                     <Label>Description of Menu</Label>
                     <Input //TODO - backend hookup
-                        type='email' 
+                        type='text' 
                         placeholder='Description' 
                     />
                     </FormGroup>
-                    <Button className='login-button'>Create Menu</Button>
+                    <Button className='menu-button'>Create Menu</Button>
                 </Form>
             </div>
         )

@@ -10,36 +10,77 @@
 
   .flex-container {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    top: 5em;
+    display: grid;
+    grid-template-areas: "nav content";
+    grid-template-columns: .25fr .54fr;
+    grid-column-gap: 2em;
+    grid-template-rows: 1fr;
+    top: 2em;
     width: 100%;
-    height: auto;
-    justify-content: space-around;
-    align-items: center;
-    background-color: green;
+    height: 500px;
     color: #fffaff;
   }
 
-  .flex-container h2 {
-    font-size: 32px;
+  .nav-container {
+    display: flex;
+    grid-area: nav;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 350px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+  }
+
+  .content-container h1 {
     font-family: 'Open Sans';
+    margin-bottom: 1em;
+  }
+
+  .content-container h2 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+  }
+
+  .content-container h3 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+    margin-right: 2em;
   }
 
   .menu {
     position: relative;
     display: flex;
-    background-color: red;
-    justify-content: left;
-    align-items: top;
-    padding: .2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: 150px;
-    width: 200px;
+    width: 400px;
+    left: 105px;
   }
 
   .menu ul {
-    text-align: left;
     list-style: none;
+  }
+
+  .menu a {
+    font-family: 'Open Sans';
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .menu a:hover {
+    color: white;
+    text-decoration: none;
   }
 
   .profile{
@@ -49,37 +90,45 @@
     justify-content: space-around;
     align-items: left;
     width: 600px;
-    height: 150px;
+    height: auto;
+    padding: 1em;
     border-radius: 5px;
-    background-color: red;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
   }
 
   .username{
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 5px;
     width: 90%;
     height: fit-content;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
   }
 
   .email{
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 5px;
     width: 90%;
     height: fit-content;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
   }
-
 
   .button{
     position: absolute;
-    right: 30px;
+    right: 0;
     color: #fffaff;
     background-color: #fc5130;
     border-radius: 5px;
@@ -89,4 +138,124 @@
   .button:hover{
     background-color: #303036;
     color: white;
+  }
+
+  .editInfoBtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 1;
+    border: none;
+    font-size: 20px;
+  }
+
+  .editInfo {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 470px;
+    left: 930px;
+    width: 800px;
+    height: auto;
+    visibility: hidden;
+  }
+
+  .editInfo.active {
+    visibility: visible;
+  }
+
+  .changename-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 300px;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
+  }
+
+  .changename-form h2 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+    margin: 1em;
+  }
+
+  .changename-form h3 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+  }
+
+  .changename-form input {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 1.5em;
+    background-color: white;
+  }
+
+  .changename-button{
+    position: relative;
+    color: white;
+    height: 35px;
+    width: 70%;
+    background-color: #fc5130;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .changename-button:hover {
+    background-color: #fc6b4e;
+  }
+
+  .changeemail-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 300px;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
+  }
+
+  .changeemail-form h2 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+    margin: 1em;
+  }
+
+  .changeemail-form h3 {
+    font-size: 18px;
+    font-family: 'Open Sans';
+  }
+
+  .changeemail-form input {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 1.5em;
+    background-color: white;
+  }
+
+  .changeemail-button{
+    position: relative;
+    color: white;
+    height: 35px;
+    width: 70%;
+    background-color: #fc5130;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .changeemail-button:hover {
+    background-color: #fc6b4e;
   }

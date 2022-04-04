@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-navbar {
+.navbar {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -13,9 +13,7 @@ navbar {
     margin-top: 1.5em;
 }
 
-
-
-navbar ul {
+.navbar ul {
     list-style: none;
 }
 

@@ -26,7 +26,7 @@ import CreateFoodIdea from './pages/CreateFoodIdea.jsx'
 //Imports Account Info and Account Password respectivaly, these are used when a user wants to make changes
 //to there profile information
 import AccountInfo from './pages/AccountInfo.jsx' 
-import AccountPassword from './pages/AccountPassword.jsx'
+import AccountPassword from './pages/AccountSecurity.jsx'
 //Imports the Forgot Password component from ForgotPass.js, this should allow users to auth their identity
 //so a password change can happen but it will not be done in T - 1.5 weeks
 import ForgotPass from './pages/ForgotPass.jsx' 
@@ -40,7 +40,7 @@ import NewMenu from './pages/NewMenu.jsx'
 //other components
 import FoodCard from './pages/FoodCard.jsx'
 
-import app from './stylesheets/app.css'
+import './stylesheets/app.css';
 //-----------------------------------------------------------------------------------------------//
 
 const App = () => {
@@ -58,8 +58,8 @@ const App = () => {
                     <Route path="/foodsuggester" element={<FoodSuggester/>} />
                     <Route path="/menusdash" element={<MenusDashboard/>} />
                     <Route path="/createfoodidea" element={<CreateFoodIdea/>} />
-                    <Route path="/accountPage/accountInfo" element={<AccountInfo/>} />
-                    <Route path="/accountPage/accountPassword" element={<AccountPassword/>} />
+                    <Route path="/account/info" element={<AccountInfo/>} />
+                    <Route path="/account/security" element={<AccountPassword/>} />
                     <Route path="/forgotpassword" element={<ForgotPass/>} />
                     <Route path="/modifyfoodidea" element={<ModifyFoodIdea/>} />
                     <Route path="/newMenu" element={<NewMenu/>} />

@@ -81,14 +81,14 @@ const CreateFoodIdea = () => {
                         )}
                         <button className='createfoodidea-button' type="submit">Save Image</button>
                     </form>
-                    <form className='createfoodidea-textform' onSubmit={addInfo()}>
+                    <form className='createfoodidea-textform' onSubmit={addInfo}>
                         <label className='titlelabel'>Title</label>
                         <input value = {title} onChange={(e) => setTitle(e.target.value)} type='text' />
                         <label>Description</label>
                         <textarea value = {description} onChange = {(e) => setDescription(e.target.value)} type='text' />
                         <label>Recipe Links</label>
                         <textarea value = {links} onChange = {(e) => setLinks(e.target.value)} type='text' />
-                        <button className='createfoodidea-button'>Save</button>
+                        <button className='createfoodidea-button' type='submit'>Save</button>
                     </form>
                 </div>
             </div>
