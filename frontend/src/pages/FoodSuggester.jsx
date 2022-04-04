@@ -51,12 +51,44 @@ const FoodSuggester = () => {
     }
 
     return ( 
-        <div className='container'>
+        <div className='flex-container2'>
             {/* Food Suggester component which suggests food ideas to the user */}
-            <Row>
+            
                 {/* This column is used for the filter form */}
-                <Col xs="3">
-                    <Container>
+                <div className='checkboxes'>
+                    <form>
+                        <fieldset className ='checkbox-inputs'>
+                            <input type='checkbox' id='beef'></input>
+                            <label for="beef">Beef</label><br/>
+                            <input type='checkbox' id='peanuts'></input>
+                            <label for="peanuts">Peanuts</label><br/>
+                            <input type='checkbox' id='poultry'></input>
+                            <label for="poultry">Poultry</label><br/>
+                            <input type='checkbox' id='pork'></input>
+                            <label for="pork">Pork</label><br/>
+                            <input type='checkbox' id='shellfish'></input>
+                            <label for="shellfish">Shellfish</label>
+                        </fieldset>
+                    </form>
+                </div>
+                {/* This column is used to display the food item*/}
+
+                <div className='foodsuggester-card'>
+                    <img src={cloudinary_url} alt="Card image cap"></img>
+                    <div className='foodsuggester-card-body'>
+                        <h1>{title}</h1>
+                        <h2>{links}</h2>
+                        <h2>{description}</h2>
+                        <Button className = 'foodsuggester-button1'>Next</Button>
+                        <Button className = 'foodsuggester-button2' onClick= {addToCookbook}>Add to Cookbook</Button>
+                    </div>
+                </div>
+        </div>
+    )
+}
+export default FoodSuggester;
+
+{/* <Container>
                         <Container>
                             <Row>
                                 <Col sm={{ size: 'auto', offset: 0 }}>
@@ -107,23 +139,4 @@ const FoodSuggester = () => {
                                 </Col>
                             </Row>
                         </Container>
-                    </Container>
-                </Col>
-                {/* This column is used to display the food item - JACK UPDATE THIS */}
-                <Col xs="auto" >
-                    <Card>
-                        <CardImg top width="100%" src={cloudinary_url} alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle>{title}</CardTitle>
-                            <CardSubtitle>{links}</CardSubtitle>
-                            <CardText>{description}</CardText>
-                            <Button style={{marginRight: 50}}>Next</Button>
-                            <Button onClick= {addToCookbook}>Add to Cookbook</Button>
-                        </CardBody>
-                    </Card>
-                </Col>
-            </Row>
-        </div>
-    )
-}
-export default FoodSuggester;
+                    </Container> */}
