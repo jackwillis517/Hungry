@@ -101,7 +101,7 @@ const changePass = asyncHandler (async(req, res) => {
         )
         //Respond with user email if password was changed
         res.status(200).json({email: email})
-        console.log({email: email})
+        
     } else {
         res.status(400)
         throw new Error('Something went wrong')

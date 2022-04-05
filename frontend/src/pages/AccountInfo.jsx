@@ -3,14 +3,17 @@ import '../stylesheets/AccountInfo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 
 const AccountInfo = () => {
     const [email, setEmail] = useState('')
     const [newusername, setNewUsername] = useState('')
     const [newemail, setNewEmail] = useState('')
+    const user = JSON.parse(window.localStorage.getItem('user'))
     
     useEffect(() => {
+        setEmail(user.email)
         let inputMoved = false
         const editInfo = document.querySelector('.editInfo')
         const editInfoBtn = document.querySelector('.editInfoBtn')
@@ -24,11 +27,9 @@ const AccountInfo = () => {
             }
         })
     }, [])
-        
-    const user = JSON.parse(window.localStorage.getItem('user'))
 
-    const onSubmitUsername = () => {
-        setEmail(user.email)
+    const onSubmitUsername = (e) => {
+        e.preventDefault()
         const userData = {
             email: email,
             newusername: newusername
@@ -36,14 +37,17 @@ const AccountInfo = () => {
         axios.put('http://localhost:5000/api/users/account/resetname', userData)
         .then((response) => {
             console.log(response)
+            toast.success('Username changed')
+            setNewUsername('')
         })
         .catch((response) => {
             console.log(response)
+            toast.error('Failed to change username')
         })
     }
     
-    const onSubmitEmail = () => {
-        setEmail(user.email)
+    const onSubmitEmail = (e) => {
+        e.preventDefault()
         const userData = {
             email: email, 
             newemail: newemail
@@ -51,9 +55,12 @@ const AccountInfo = () => {
         axios.put('http://localhost:5000/api/users/account/resetemail', userData)
         .then((response) => {
             console.log(response)
+            toast.success('Email changed')
+            setNewEmail('')
         })
         .catch((response) => {
             console.log(response)
+            toast.error('Failed to change email')
         })
     }
 
@@ -109,7 +116,7 @@ const AccountInfo = () => {
                             id = 'newemail'
                             name = 'newemail'
                             onChange = {(e) => {setNewEmail(e.target.value)}} 
-                            type='password' 
+                            type='email' 
                             placeholder='' 
                         />
                         <button className='changeemail-button' type='submit'>Change</button>

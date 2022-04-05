@@ -5,6 +5,7 @@ import axios from 'axios';
 
 //CSS for this specific components
 import '../stylesheets/CreateFoodIdea.css';
+import { toast } from 'react-toastify';
 
 const CreateFoodIdea = () => {
     //useState hook used to gather state info
@@ -43,14 +44,17 @@ const CreateFoodIdea = () => {
         .then((response) => {
             setCloudinary_URL(response.data.cloudinary_url)
             console.log(cloudinary_url)
+            toast.success('Image uploaded')
         })
         .catch((response) => {
             console.log(response)
+            toast.error('Upload failed')
         })  
     }
 
     //Function used to add food idea information to the backend
-    const addInfo = () => {
+    const addInfo = (e) => {
+        e.preventDefault()
         const foodIdeaData = {
             title: title,
             description: description,
@@ -60,9 +64,14 @@ const CreateFoodIdea = () => {
         axios.post("http://localhost:5000/api/foodIdea", foodIdeaData)
             .then((response) => {
                 console.log(response.status)
+                toast.success('Food idea added')
+                setTitle('')
+                setDescription('')
+                setLinks('')
             })
             .catch((response) => {
                 console.log(response)
+                toast.error('Food idea failed to upload')
             })
     }
 
@@ -70,8 +79,7 @@ const CreateFoodIdea = () => {
         <div>
             {/* Create Food Idea component used so the user can create a food idea */}
             {/* Doesn't use reactstrap, ran into some hiccups on the backend */}
-            <div className='createfoodidea-container'>
-                <div className='createfoodidea-infoinput'>
+            <div className='createfoodidea-container'> 
                     <form className='createfoodidea-textform' onSubmit={submitImage}>
                         <label>Image</label>
                         <input className="imageinput" type="file" name="image"
@@ -90,7 +98,7 @@ const CreateFoodIdea = () => {
                         <textarea value = {links} onChange = {(e) => setLinks(e.target.value)} type='text' />
                         <button className='createfoodidea-button' type='submit'>Save</button>
                     </form>
-                </div>
+                
             </div>
         </div>
     )
