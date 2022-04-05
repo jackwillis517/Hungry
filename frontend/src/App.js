@@ -7,38 +7,40 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 //----------------------------------------Component Imports--------------------------------------//
-//Imports the Login component from Login.js, this is where a user can login to an existing account
+//Imports the Login component from Login.jsx, this is where a user can login to an existing account
 import Login from './pages/Login.jsx'
-//Imports the Create User component from CreateUser.js, this is where a user can create an account
+//Imports the Create User component from CreateUser.jsx, this is where a user can create an account
 import CreateUser from './pages/CreateUser.jsx'
-//Imports the Navbar component from Navbar.js, this component is a test bench for the navbar and is never
+//Imports the Navbar component from Navbar.jsx, this component is a test bench for the navbar and is never
 //actually used directly
 import Navbar from './components/Navbar.jsx'
-//Imports the Food Suggester component from FoodSuggester.js, this is where users can select randomly
+//Imports the Food Suggester component from FoodSuggester.jsx, this is where users can select randomly
 //suggested food items
 import FoodSuggester from './pages/FoodSuggester.jsx'
-//Imports the Menus Dashboard component from MenusDashboard.js, this is where a user can see and access
+//Imports the Menus Dashboard component from MenusDashboard.jsx, this is where a user can see and access
 //the menus they have created which are a kind of playlist of food items a user might reference in the future
 import MenusDashboard from './pages/MenusDashboard.jsx'
-//Imports the Create Food Idea component from CreateFoodIdea.js, this is where a user can create a new
+//Imports the Create Food Idea component from CreateFoodIdea.jsx, this is where a user can create a new
 //food idea, which can be added to specific menus or the users cookbook in the future
 import CreateFoodIdea from './pages/CreateFoodIdea.jsx'
 //Imports Account Info and Account Password respectivaly, these are used when a user wants to make changes
 //to there profile information
 import AccountInfo from './pages/AccountInfo.jsx' 
 import AccountPassword from './pages/AccountSecurity.jsx'
-//Imports the Forgot Password component from ForgotPass.js, this should allow users to auth their identity
+//Imports the Forgot Password component from ForgotPass.jsx, this should allow users to auth their identity
 //so a password change can happen but it will not be done in T - 1.5 weeks
 import ForgotPass from './pages/ForgotPass.jsx' 
-//Imports the Modify Food Idea component from ModifyFoodIdea.js, this allows the user to modify or delete
+//Imports the Modify Food Idea component from ModifyFoodIdea.jsx, this allows the user to modify or delete
 //an existing food idea
 import ModifyFoodIdea from './pages/ModifyFoodIdea.jsx'
-//Imports the New Menu component from NewMenu.js, this allows a user to create a new menu to add food items
+//Imports the New Menu component from NewMenu.jsx, this allows a user to create a new menu to add food items
 //to
 import NewMenu from './pages/NewMenu.jsx'
-//Imports the Food Card component from FoodCard.js, this is used to display food items across various 
+//Imports the Food Card component from FoodCard.jsx, this is used to display food items across various 
 //other components
 import FoodCard from './pages/FoodCard.jsx'
+//Imports the Cookbook Page component from CookbookPage.jsx
+import CookbookPage from './pages/CookbookPage.jsx'
 
 import './stylesheets/app.css';
 //-----------------------------------------------------------------------------------------------//
@@ -56,6 +58,7 @@ const App = () => {
                     <Route path="/login" element={<Login/>} />
                     <Route path="/createuser" element={<CreateUser/>} />
                     <Route path="/foodsuggester" element={<FoodSuggester/>} />
+                    <Route path="/cookbook" element={<CookbookPage/>} />
                     <Route path="/menusdash" element={<MenusDashboard/>} />
                     <Route path="/createfoodidea" element={<CreateFoodIdea/>} />
                     <Route path="/account/info" element={<AccountInfo/>} />
