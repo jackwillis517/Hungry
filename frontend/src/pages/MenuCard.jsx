@@ -21,8 +21,14 @@ class MenuCard extends Component {
                     top
                     width="100%"
                 />
-                <CardBody>
-                    <CardTitle tag="h5">
+                <CardBody style={{
+                    backgroundColor: '#5e5e5e',
+                    // borderColor: 'white'
+                }}>
+                    <CardTitle tag="h5" style={{
+                        backgroundColor: '#5e5e5e',
+                        // borderColor: 'white'
+                    }}>
                         {this.props.menuItem.name}
                     </CardTitle>
                     {/* Based on the layout each card only displays a Title, but in case we wanted to add other stuff later, the code below adds subtitles and text */}
