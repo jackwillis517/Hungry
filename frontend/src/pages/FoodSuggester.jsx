@@ -99,8 +99,8 @@ const FoodSuggester = () => {
                     <img src={cloudinary_url} alt="Card image cap"></img>
                     <div className='foodsuggester-card-body'>
                         <h1>{title}</h1>
-                        <h2>{links}</h2>
                         <h2>{description}</h2>
+                        <h2>{links}</h2>
                         <Button className = 'foodsuggester-button1' onClick={getNewIdea}>Next</Button>
                         <Button className = 'foodsuggester-button2' onClick= {addToCookbook}>Add to Cookbook</Button>
                     </div>

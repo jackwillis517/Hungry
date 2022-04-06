@@ -8,7 +8,7 @@
 
 .foodsuggester-card {
     order: 2;
-    width: 300px;
+    width: 500px;
     max-height: 100px;
     text-align: center;
     margin-left: 50px;
@@ -18,7 +18,7 @@
 }
 
 .foodsuggester-card img {
-    width: 300px;
+    width: 500px;
     height: 300px;
     
 }
@@ -32,10 +32,14 @@
 
 .foodsuggester-card-body h1 {
     background-color: #fc5130;
+    padding: .5em;
 }
 
 .foodsuggester-card-body h2 {
     background-color: #fc5130;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .checkboxes{
