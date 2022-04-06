@@ -1,5 +1,3 @@
-// Test Bed for the navbar this is NOT important and is never used <-------------------------
-// IGNORE
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +18,7 @@ const Navbar = () => {
     const onLogout = () => {
       dispatch(logout())
       dispatch(reset())
-      navigate('/navbar')
+      navigate('/')
     }
 
     return ( 

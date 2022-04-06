@@ -32,7 +32,7 @@ const Login = () => {
       }
 
       if (isSuccess || user) {
-        navigate('/navbar')
+        navigate('/')
       }
 
       dispatch(reset())

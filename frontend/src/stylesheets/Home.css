@@ -1,0 +1,85 @@
+.home-flex-container-logged-out {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    width: 50vh;
+    height: 45vh;
+    margin-top: 2vh;
+    color: white;
+    border-radius: 15px;
+    background-color: #fc5130;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.h1-logged-out {
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fc5130;
+}
+
+.h3-logged-out {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    padding-left: 40px;
+    text-align: center;
+    background-color: #fc5130;
+}
+
+.h3-logged-out-text {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    padding-left: 40px;
+    text-align: left;
+    background-color: #fc5130;
+}
+
+.h3-logged-out-list-title {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 40px;
+    text-align: center;
+    background-color: #fc5130;
+}
+
+.ul-logged-out {
+    list-style: none;
+    background-color: #fc5130;
+}
+
+.li-logged-out {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding-left: 40px;
+    background-color: #fc5130;
+}
+
+/* -------------------------------------- Logged In Classes ---------------------------------------- */
+.home-flex-container-logged-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    margin-top: 2vh;
+    width: 60vh;
+    height: 65vh;
+    color: white;
+    border: 1px solid red;
+} 
+
+.h1-logged-in {
+    padding-top: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.food-item-logged-in {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid green;
+}
+
