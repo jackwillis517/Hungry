@@ -59,6 +59,7 @@ const CreateUser = () => {
         }
 
         dispatch(register(userData))
+        toast.success('Account created!')
       }
     }
 
