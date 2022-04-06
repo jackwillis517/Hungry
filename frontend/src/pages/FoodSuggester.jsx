@@ -4,8 +4,11 @@ import axios from 'axios';
 //CSS for this specific components
 import '../stylesheets/FoodSuggester.css'; 
 
+//Import toastify for notifications
+import {toast} from 'react-toastify';
+
 //Import for reactstrap premade components/labels
-import { Container, Col, Row, Input, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
+import {Button} from 'reactstrap';
 
 const FoodSuggester = () => {
     const [foodIdeaID, setFoodIdeaID] = useState('')
@@ -36,18 +39,37 @@ const FoodSuggester = () => {
 
     //Adds the currently displayed food idea to the foodidea array
     //in the user's document in mongoDB
-    const addToCookbook = () => {
+    const addToCookbook = (e) => {
+        e.preventDefault()
         const accountID = JSON.parse(localStorage.getItem('user'))
         console.log(accountID._id)
         console.log(foodIdeaID)
         axios.put(`http://localhost:5000/api/users/account/${foodIdeaID}/${accountID._id}`)
-        .then((res) => {
+        .then(() => {
             console.log(`The food idea: ${foodIdeaID}, was added to the user: 
             ${accountID._id} account`)
+            toast.success('Food idea added to cookbook')
+            getNewIdea();
         })
         .catch((error) => {
             console.error(error)
+            toast.success('Unable to add food idea to cookbook :(')
         })
+    }
+
+    const getNewIdea = () => {
+        axios.get('http://localhost:5000/api/foodIdea')
+            .then((res) => {
+                const randNum = getRandomInt(res.data.length)
+                setFoodIdeaID(res.data[randNum]._id)
+                setTitle(res.data[randNum].title)
+                setDescription(res.data[randNum].description)
+                setLinks(res.data[randNum].links)
+                setCloudinary_URL(res.data[randNum].cloudinary_url)
+            })
+            .catch((error) => {
+                console.error(error)
+            })
     }
 
     return ( 
@@ -79,7 +101,7 @@ const FoodSuggester = () => {
                         <h1>{title}</h1>
                         <h2>{links}</h2>
                         <h2>{description}</h2>
-                        <Button className = 'foodsuggester-button1'>Next</Button>
+                        <Button className = 'foodsuggester-button1' onClick={getNewIdea}>Next</Button>
                         <Button className = 'foodsuggester-button2' onClick= {addToCookbook}>Add to Cookbook</Button>
                     </div>
                 </div>
