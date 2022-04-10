@@ -41,7 +41,7 @@ class MenuCard extends Component {
                     <CardText>
                         {this.props.menuItem.description}
                     </CardText> */}
-                    <Button>
+                    <Button href="/menuPage">
                         More Info
                     </Button>
                 </CardBody>

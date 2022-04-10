@@ -60,7 +60,7 @@ class MenuPage extends Component {
                 <h2 class="text-center" style={{
                     color: 'white',
                     // borderColor: 'white'
-                }}>MenuTitle</h2>
+                }}>Menu Name</h2>
                 {/* Menus Dashboard component used to show a user their menus they've created */}
                 <Row className="py-5" noGutters>
                     <Col xs="2">
@@ -77,7 +77,7 @@ class MenuPage extends Component {
                     </Col>
                     <Col xs="2">
                         <div>
-                            <Button href="/newMenu" color="light">
+                            <Button color="light">
                                 Create
                             </Button>
                         </div>
