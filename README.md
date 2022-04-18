@@ -68,8 +68,7 @@ Sever.js is the main file for the backend system
 
 ## Testing
 ### To log into the backend database services go to Cloudinary and MongoDB's websites and use the following credentials:
-####    Username: nolanwillis38@gmail.com
-####    Password: Murphy911!
+#### Username: nolanwillis38@gmail.com Password: Murphy911!
 
 ### IMPORTANT: In mongoDB be sure to navigate to the Network Access page and add your current IP address, if you don't you'll get an error when you run: npm run server.
 
