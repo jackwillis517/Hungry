@@ -71,11 +71,9 @@ Sever.js is the main file for the backend system
 #### Username: nolanwillis38@gmail.com
 #### Password: Murphy911!
 
-#### IMPORTANT: In mongoDB be sure to navigate to the Network Access page and add your current IP address, if you don't you'll get 
-an error when you run npm run server.
+### IMPORTANT: In mongoDB be sure to navigate to the Network Access page and add your current IP address, if you don't you'll get an error when you run: npm run server.
 
-#### If you run into any problems getting this working please email me at: nwillis@syr.edu. MongoDB can be a little over protective at times.
-#### Oh and this is my personal mongoDB account, please don't mess with the other projects.
+#### If you run into any problems getting this working please email me at: nwillis@syr.edu. MongoDB can be a little over protective at times. Oh and this is my personal mongoDB account, please don't mess with the other projects.
 
 ---
 
