@@ -4,6 +4,8 @@
 
 ---
 ## Getting Started Guide
+### **NodeJS**
+#### Before doing anything download NodeJS from https://nodejs.org/en/download/, be sure to follow the standard download that includes npm (just click accept or ok until the prompt disappears) we'll need this later.
 
 ### **Dependencies**
 #### Please install the following dependencies in ```Hungry\backend``` before running the app with the following commands:
