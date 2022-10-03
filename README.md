@@ -68,15 +68,6 @@ The _Random Food Idea Generator_ is where random food ideas are suggested which 
 
 Sever.js is the main file for the backend system
 
-## Testing
-### To log into the backend database services go to Cloudinary and MongoDB's websites and use the following credentials:
-#### Username: nolanwillis38@gmail.com      
-#### Password: Murphy911!
-
-### IMPORTANT: In mongoDB be sure to navigate to the Network Access page and add your current IP address, if you don't you'll get an error when you run: npm run server.
-
-#### If you run into any problems getting this working please email me at: nwillis@syr.edu. MongoDB can be a little over protective at times. Oh and this is my personal mongoDB account, please don't mess with the other projects.
-
 ---
 
 ##### Hungry's Creators: Conner Gurnham, Fabian Ponce De Leon, William Seeley, Robert Ward, Jack Willis & Nolan Willis
